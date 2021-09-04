@@ -7,12 +7,19 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "kremling": "^2.1.0",
+    "lodash": "^4.17.21",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "react-dom-box2d": "^0.4.1-patch.1",
+    "react-use": "^17.3.1",
+    "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.172",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/regenerator-runtime": "^0.13.1",
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "typescript": "^4.3.2",
     "vite": "^2.5.2",
