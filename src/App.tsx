@@ -5,7 +5,6 @@ import { useCss } from 'kremling'
 import { useWindowSize, useMouse } from 'react-use'
 import { random, round } from 'lodash'
 
-//degrees to radians
 const toRadians = function (degrees: number) {
   return (degrees * Math.PI) / 180
 }
@@ -26,7 +25,7 @@ const App = () => {
   const [cannonBalls, setCannonBalls] = useState<{ force: number[] }[]>([])
   const [angle, setAngle] = useState<number>(45)
   const makeCannonBall = () => {
-    setCannonBalls([{ force: forceAtAngle(100, angle) }])
+    setCannonBalls([{ force: forceAtAngle(1, angle) }])
     const ang = random(0, 360, true)
     setAngle(ang)
   }
@@ -39,18 +38,17 @@ const App = () => {
             key={ball.force[1]}
             left={docX}
             top={docY}
-            density={1}
+            density={0.00001}
             friction={0}
             restitution={1}
-            width={30}
-            height={30}
+            width={50}
+            height={50}
             initialForce={ball.force}
             shape="circle"
           >
             <div className="cannon-ball" />
           </Item>
         ))}
-        {/* reference line to visualize the angle */}
         <div
           className="line"
           style={{
